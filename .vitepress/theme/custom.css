@@ -1,0 +1,126 @@
+/* ===== 品牌色 ===== */
+:root {
+  --vp-c-brand-1: #6366f1;
+  --vp-c-brand-2: #4f46e5;
+  --vp-c-brand-3: #4338ca;
+  --vp-c-brand-soft: rgba(99, 102, 241, 0.12);
+}
+
+.dark {
+  --vp-c-brand-1: #818cf8;
+  --vp-c-brand-2: #6366f1;
+  --vp-c-brand-3: #4f46e5;
+  --vp-c-brand-soft: rgba(129, 140, 248, 0.12);
+}
+
+/* ===== 內文排版 ===== */
+.vp-doc {
+  max-width: 780px;
+}
+
+.vp-doc h2 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  margin-top: 2rem;
+}
+
+/* 讓段落之間更透氣 */
+.vp-doc p {
+  line-height: 1.85;
+}
+
+/* ===== 🅰🅱 路線切換 ===== */
+
+/* 選了 🅰 時隱藏 🅱 */
+html[data-handbook-route="a"] .vp-doc [data-route="b"] {
+  display: none !important;
+}
+
+/* 選了 🅱 時隱藏 🅰 */
+html[data-handbook-route="b"] .vp-doc [data-route="a"] {
+  display: none !important;
+}
+
+/* 🅰 路線標題樣式 */
+.vp-doc p[data-route="a"] {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  background: rgba(59, 130, 246, 0.08);
+  border-left: 3px solid #3b82f6;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95em;
+}
+
+/* 🅱 路線標題樣式 */
+.vp-doc p[data-route="b"] {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 3px solid #10b981;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95em;
+}
+
+.dark .vp-doc p[data-route="a"] {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.dark .vp-doc p[data-route="b"] {
+  background: rgba(16, 185, 129, 0.12);
+}
+
+/* ===== 模式表格 ===== */
+.vp-doc table {
+  font-size: 0.92em;
+}
+
+.vp-doc table th {
+  background-color: var(--vp-c-brand-soft);
+  font-weight: 600;
+}
+
+/* ===== blockquote 用於驗證日期 ===== */
+.vp-doc blockquote {
+  border-left-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
+  padding: 0.8rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+}
+
+/* ===== 程式碼區塊 ===== */
+.vp-doc div[class*="language-"] {
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* ===== 速查表頁面的表格 ===== */
+.vp-doc table a {
+  font-weight: 500;
+}
+
+/* ===== 首頁微調 ===== */
+.VPFeatures .VPFeature {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.VPFeatures .VPFeature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== 手機版微調 ===== */
+@media (max-width: 768px) {
+  .vp-doc h1 {
+    font-size: 1.6rem;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.3rem;
+  }
+}
